@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+      display: flex;
+      justify-content: center;
+    }
+    .contaner{
+      background-color: #F0F1EC;
+      height: 100vh;
+      width: 100vh;
+      display: grid;
+      grid-template-columns: 45vh 350px 1fr;
+      grid-template-rows:55vh 305px 1fr ;
+    }
+    #first{
+      background-color: #E72F24;
+      height: 55vh;
+      width: 45vh;
+    }
+    #sec{
+      grid-area:2/3;
+      background-color: #004592;
+      height: 130px;
+      width:55px;
+      justify-self:end;
+      border-bottom:20px solid black;
+    }
+    #three{
+      grid-area:3/2;
+      background-color: #232629;
+      height: 20px;
+      width: 150px;
+      
+      margin-left: 200px;
+      align-self: flex-end;
+      border-left: 10px solid black;
+    }
+    #four{
+      align-self: flex-end;
+      grid-area: 3/2;
+      background-color: #F9D01E;
+      height: 20px;
+      width: 200px;
+    }
+    .upline{
+      background-color: black;
+      width: 10px;
+    }
+    .downline{
+      background-color: black;
+      height: 10px;
+    }
+
+    #no1{
+      grid-column: 2;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+    #no2{
+      grid-row: 2;
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+    #no3{
+      grid-row:3;
+      grid-column-start: 1;
+      grid-column-end:3;
+      order: 2;
+    }
+    #no4{
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-column: 3;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div class="contaner">
+    <div id="first"></div>
+    <div id="sec"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div class="upline" id="no1"></div>
+    <div class="downline" id="no2"></div>
+    <div class="downline" id="no3"></div>
+    <div class="upline" id="no4"></div>
+  </div>
+</body>
+
+</html>
